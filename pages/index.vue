@@ -19,15 +19,35 @@
           <h1>Mohamad Achun Armando</h1>
           <span>Full Stack Web Developer</span>
         </div>
-        <v-row justify="center">
-          <v-col cols="12" md="5">
-            <v-row class="text-center">
-              <v-col v-for="i in menu" :key="i" cols="2" md="3" class="menu">
-                {{ i }}
-              </v-col>
-            </v-row>
-          </v-col>
-        </v-row>
+        <div class="d-flex justify-center mt-4">
+          <div v-for="(social, i) in socials" :key="i" class="mx-4">
+            <v-tooltip bottom :color="social.color">
+              <template v-slot:activator="{ on, attrs }">
+                <v-btn
+                  :href="social.link"
+                  target="_blank"
+                  height="15"
+                  icon
+                  x-small
+                  v-bind="attrs"
+                  v-on="on"
+                >
+                  <v-img :src="social.icon" width="15" contain> </v-img>
+                </v-btn>
+              </template>
+              <span>{{ social.link }}</span>
+            </v-tooltip>
+          </div>
+        </div>
+        <div class="d-flex justify-center mt-7">
+          <div
+            v-for="(page, i) in pages"
+            :key="i"
+            class="mx-2 mx-sm-6 mx-md-10"
+          >
+            <nuxt-link class="menu" :to="page.url">{{ page.title }}</nuxt-link>
+          </div>
+        </div>
       </v-col>
     </v-row>
   </v-container>
@@ -37,13 +57,63 @@
 export default {
   data: () => ({
     imgProfile: require('../assets/image/imgProfile.jpeg'),
-    menu: ['About', 'Blog', 'Projects', 'Contact Me'],
+    pages: [
+      {
+        title: 'About',
+        url: '/comingsoon',
+      },
+      {
+        title: 'Blog',
+        url: '/comingsoon',
+      },
+      {
+        title: 'Projects',
+        url: '/comingsoon',
+      },
+      {
+        title: 'Contact Me',
+        url: '/comingsoon',
+      },
+    ],
+    socials: [
+      {
+        name: 'Facebook',
+        link: 'https://facebook.com/atjhoendz789',
+        icon: require('../assets/social/facebook.svg'),
+        color: '#1877F2',
+      },
+      {
+        name: 'Dev.to',
+        link: 'https://dev.to/atjhoendz',
+        icon: require('../assets/social/dev-dot-to.svg'),
+        color: '#0A0A0A',
+      },
+      {
+        name: 'Github',
+        link: 'https://github.com/atjhoendz',
+        icon: require('../assets/social/github.svg'),
+        color: '#181717',
+      },
+      {
+        name: 'Linkedin',
+        link: 'https://linkedin.com/in/moh-achun-armando',
+        icon: require('../assets/social/linkedin.svg'),
+        color: '#0077B5',
+      },
+      {
+        name: 'Email',
+        link: 'mailto:achunarmando@gmail.com',
+        icon: require('../assets/social/gmail.svg'),
+        color: '#D14836',
+      },
+    ],
   }),
 }
 </script>
 <style scoped>
 .menu {
   text-transform: uppercase;
+  text-decoration: none;
 }
 .menu:hover {
   cursor: pointer;
