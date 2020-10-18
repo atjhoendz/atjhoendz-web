@@ -64,7 +64,7 @@ export default {
       },
       {
         title: 'Blog',
-        url: '/comingsoon',
+        url: '/blog',
       },
       {
         title: 'Projects',
