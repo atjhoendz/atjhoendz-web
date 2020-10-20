@@ -1,36 +1,53 @@
 <template>
   <v-app>
+    <Navdraw />
     <v-main>
       <nuxt />
     </v-main>
     <v-footer color="white">
-      <v-col class="text-center" cols="12">
+      <div class="d-flex justify-center align-center mx-auto">
         &copy; {{ new Date().getFullYear() }} - Built with
-        <v-tooltip top color="#00C58E">
+        <v-tooltip v-for="(tech, i) in techs" :key="i" top :color="tech.color">
           <template v-slot:activator="{ on, attrs }">
-            <a
-              href="https://nuxtjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
+            <v-img
+              :src="tech.img"
+              height="15"
+              width="15"
+              contain
+              class="ml-2"
               v-bind="attrs"
               v-on="on"
-              ><img
-                src="~/assets/social/nuxt-dot-js.svg"
-                alt="Nuxt.js"
-                height="15"
-            /></a>
+            ></v-img>
           </template>
-          <span>Nuxt.js</span>
+          <span>{{ tech.name }}</span>
         </v-tooltip>
-      </v-col>
+      </div>
     </v-footer>
   </v-app>
 </template>
 
 <script>
+import Navdraw from '../components/Navdraw'
+
 export default {
+  components: {
+    Navdraw,
+  },
   data() {
-    return {}
+    return {
+      techs: [
+        {
+          name: 'Nuxt.js',
+          img: require('../assets/social/nuxt-dot-js.svg'),
+          color: '#00C58E',
+        },
+        {
+          name: 'Vuetify',
+          img: require('../assets/social/vuetify.svg'),
+          color: '#1867C0',
+        },
+      ],
+    }
   },
 }
 </script>
