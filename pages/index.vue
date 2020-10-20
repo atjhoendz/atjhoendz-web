@@ -60,7 +60,7 @@ export default {
     pages: [
       {
         title: 'About',
-        url: '/comingsoon',
+        url: '/about',
       },
       {
         title: 'Blog',
@@ -68,7 +68,7 @@ export default {
       },
       {
         title: 'Projects',
-        url: '/comingsoon',
+        url: '/projects',
       },
       {
         title: 'Contact Me',
@@ -107,6 +107,9 @@ export default {
         color: '#D14836',
       },
     ],
+  }),
+  head: () => ({
+    title: 'Home',
   }),
 }
 </script>
