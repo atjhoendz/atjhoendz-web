@@ -5,11 +5,13 @@
     fixed
     floating
     app
-    grow
-    :mini-variant="false"
+    disable-resize-watcher
+    disable-route-watcher
+    :mini-variant="this.$vuetify.breakpoint.mobile ? true : false"
+    :mini-variant-width="40"
     style="top: 50%; transform: translate(0, -50%); height: fit-content"
   >
-    <v-list rounded :flat="false">
+    <v-list rounded :flat="this.$vuetify.breakpoint.mobile ? true : false">
       <v-list-item
         v-for="(menu, i) in menus"
         :key="i"
@@ -32,7 +34,7 @@
         <v-list-item-title>Back</v-list-item-title>
       </v-list-item>
     </v-list>
-    <AppSearchInput />
+    <SearchBlogInput v-if="!this.$vuetify.breakpoint.mobile" />
   </v-navigation-drawer>
 </template>
 
@@ -40,7 +42,7 @@
 export default {
   name: 'Navdraw',
   components: {
-    AppSearchInput: () => import('../components/AppSearchInput'),
+    SearchBlogInput: () => import('../components/SearchBlogInput'),
   },
   data: () => ({
     drawer: false,

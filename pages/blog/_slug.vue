@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <article class="mt-10">
-      <h1 class="text-h3 mb-3">{{ article.title }}</h1>
+      <h1 class="text-h4 text-md-h3 mb-3">{{ article.title }}</h1>
       <p class="mb-3">{{ article.description }}</p>
       <p class="mb-3 text-caption">
         <v-icon color="blue" dense>mdi-clock-outline</v-icon>
@@ -21,7 +21,6 @@
       </div>
 
       <nuxt-content :document="article" />
-
       <v-divider class="mt-5"></v-divider>
       <p class="mt-3 text-caption">
         Updated at {{ formatDate(article.updatedAt) }}
@@ -33,11 +32,9 @@
 </template>
 
 <script>
-import PrevNext from '../../components/PrevNext'
-
 export default {
   components: {
-    PrevNext,
+    PrevNext: () => import('../../components/PrevNext'),
   },
   async asyncData({ $content, params }) {
     const article = await $content('blog', params.slug).fetch()
@@ -97,5 +94,19 @@ export default {
 }
 .nuxt-content p {
   margin-bottom: 20px;
+}
+@media screen and (max-width: 480px) {
+  .nuxt-content h1 {
+    font-weight: bold;
+    font-size: 25px;
+  }
+  .nuxt-content h2 {
+    font-weight: bold;
+    font-size: 22px;
+  }
+  .nuxt-content h3 {
+    font-weight: bold;
+    font-size: 19px;
+  }
 }
 </style>

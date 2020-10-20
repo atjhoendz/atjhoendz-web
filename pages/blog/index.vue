@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <h1 class="text-center">List Blog</h1>
+    <h1 class="text-center">Blog</h1>
     <v-list>
       <v-list-item
         v-for="(blog, i) in blogs"
