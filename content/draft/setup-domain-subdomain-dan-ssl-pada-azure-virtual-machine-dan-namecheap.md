@@ -8,6 +8,8 @@ author:
 
 # Setup Domain
 
+# Redirect IP to Domain
+
 # Setup SSL
 
 # Setup Subdomain
