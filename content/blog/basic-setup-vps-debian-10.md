@@ -29,14 +29,6 @@ Pada konfigurasi ini menggunakan user root, yaitu tipe user pada saat pertama ka
 ssh root@alamatipvps
 ```
 
-```javascript[nuxt.config.js]
-  modules: [
-    "@nuxtjs/axios",
-    "@nuxtjs/pwa",
-    "@nuxt/content"
-  ],
-```
-
 ## Mengganti Password
 
 ```bash[terminal]
