@@ -10,6 +10,10 @@ module.exports = {
         black: '#000000',
         white: '#FFFFFF',
       },
+      fontFamily: {
+        nunito: ['nunito', 'sans-serif'],
+        playFair: ['Playfair Display', 'serif'],
+      },
     },
   },
   variants: {

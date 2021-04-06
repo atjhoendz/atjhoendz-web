@@ -1,13 +1,13 @@
 <template>
-  <div class="bg-darkBlue">
+  <header class="bg-transparent fixed w-full">
     <div
       class="flex flex-row justify-between space-x-0 md:space-x-4 py-6 mx-auto w-3/4 align-middle"
     >
-      <header>
+      <div>
         <a href="/" class="block">
-          <span class="text-xl font-bold my-auto">M. A. Armando</span></a
+          <span class="text-xl font-bold my-auto">M. A. ARMANDO</span></a
         >
-      </header>
+      </div>
       <button
         class="inline-block w-8 h-8 md:hidden hover:bg-lightBlue p-1"
         @click="mobileMenuOpen = !mobileMenuOpen"
@@ -25,23 +25,23 @@
         </svg>
       </button>
       <nav
-        class="transition duration-700 ease-out absolute md:relative top-16 md:top-0 left-11 md:flex flex-col md:flex-row md:space-x-6 font-semibold text-md md:text-lg shadow-lg md:shadow-none bg-lightBlue md:bg-darkBlue w-3/4 md:w-auto text-center"
+        class="transition duration-700 ease-out absolute md:relative top-16 md:top-0 left-11 md:flex flex-col md:flex-row md:space-x-6 font-semibold text-md md:text-lg shadow-lg md:shadow-none bg-lightBlue md:bg-transparent w-3/4 md:w-auto text-center"
         :class="{ flex: mobileMenuOpen, hidden: !mobileMenuOpen }"
       >
         <a href="#" class="text-lightYellow transform hover:scale-110 my-auto"
-          >About</a
+          >ABOUT</a
         >
-        <a href="#" class="transform hover:scale-110 my-auto">Projects</a>
-        <a href="#" class="transform hover:scale-110 my-auto">Blogs</a>
-        <a href="#" class="transform hover:scale-110 my-auto">Contacts</a>
+        <a href="#" class="transform hover:scale-110 my-auto">PROJECTS</a>
+        <a href="#" class="transform hover:scale-110 my-auto">BLOG</a>
+        <a href="#" class="transform hover:scale-110 my-auto">CONTACT</a>
         <button
-          class="border-lightYellow border-2 bg-darkBlue hover:bg-lightYellow hover:text-darkBlue hover:font-semibold p-2.5"
+          class="border-lightYellow border-2 bg-transparent hover:bg-lightYellow hover:text-darkBlue hover:font-semibold p-2.5"
         >
           LET'S CHAT
         </button>
       </nav>
     </div>
-  </div>
+  </header>
 </template>
 
 <script>
