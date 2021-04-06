@@ -1,5 +1,11 @@
 # atjhoendz-web
 
+My personal website
+
+[atjhoendz.github.io](https://atjhoendz.github.io)
+
+## Build With NuxtJS
+
 ## Build Setup
 
 ```bash
@@ -13,8 +19,9 @@ $ yarn dev
 $ yarn build
 $ yarn start
 
+# lint code
+$ yarn lint
+
 # generate static project
 $ yarn generate
 ```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
