@@ -6,12 +6,25 @@ os:
   - linux
 dist: focal
 
+cache: yarn
+
+install: yarn install
+
+script:
+  - yarn build
+  - yarn generate
+  - yarn lint
+
 branches:
   only:
     - main
-    - master
 
-cache: yarn
-
-script:
-  - yarn lint
+deploy:
+  provider: pages
+  repo: atjhoendz/atjhoendz.github.io
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: dist
+  target_branch: master
+  on:
+    branch: main
