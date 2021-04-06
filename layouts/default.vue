@@ -1,5 +1,6 @@
 <template>
   <div>
+    <header-menu />
     <Nuxt />
   </div>
 </template>
@@ -15,6 +16,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  color: white;
 }
 
 *,
