@@ -1,9 +1,10 @@
 <template>
   <div>
-    <section class="bg-darkBlue">
-      <div
-        class="container flex flex-row items-center justify-center mx-auto pt-5 md:pt-16 px-3 md:px-0"
-      >
+    <section
+      id="home"
+      class="bg-gradient-to-br from-darkBlue via-lightBlue to-darkBlue"
+    >
+      <div class="container min-h-screen pt-5 md:pt-16 px-3 md:px-0">
         <div class="">
           <span class="block text-2xl md:text-4xl text-lightYellow mb-3"
             >Hello, I'm</span
@@ -19,17 +20,29 @@
           >
         </div>
 
-        <div class="ml-5 md:ml-28">
+        <div class="ml-5 md:ml-24">
           <img
-            src="../assets/img/dummy/man-removebg-preview.png"
+            src="../assets/img/imgProfile.png"
             alt="avatar"
-            class="object-contain imgHeight hidden md:block"
+            class="object-contain imgHeight hidden md:block imgFilter"
           />
         </div>
       </div>
     </section>
-    <section class="bg-lightBlue">
-      <div class="container">halo</div>
+    <section id="about" class="bg-lightBlue">
+      <div class="container sectionHeight">ABOUT</div>
+    </section>
+    <section id="projects" class="bg-gradient-to-b from-lightBlue to-darkBlue">
+      <div class="container min-h-screen">PROJECTS</div>
+    </section>
+    <section id="blog" class="bg-gradient-to-t from-lightBlue to-darkBlue">
+      <div class="container min-h-screen">BLOG</div>
+    </section>
+    <section id="bookmarks" class="bg-gradient-to-b from-lightBlue to-darkBlue">
+      <div class="container min-h-screen">BOOKMARKS</div>
+    </section>
+    <section id="contact" class="bg-gradient-to-t from-lightBlue to-darkBlue">
+      <div class="container h-70vh">CONTACT</div>
     </section>
   </div>
 </template>
@@ -39,48 +52,32 @@ export default {
   head: () => ({
     title: 'Home',
   }),
+  transitions: {
+    mode: 'out-in',
+    duration: '1s',
+  },
 }
 </script>
 
 <style>
-/* Sample `apply` at-rules with Tailwind CSS
 .container {
-@apply min-h-screen flex justify-center items-center text-center mx-auto;
+  @apply flex items-center justify-center mx-auto;
 }
-*/
-.container {
-  /* margin: 0 auto; */
-  min-height: 100vh;
 
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center; */
+.sectionHeight {
+  min-height: 80vh;
+}
+
+.h-70vh {
+  min-height: 70vh;
 }
 
 .imgHeight {
-  height: 80vh;
+  height: 65vh;
+  width: 65vh;
 }
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+.imgFilter {
+  filter: brightness(0.87) drop-shadow(0.5rem 0.6rem 0.4rem rgba(0, 0, 0, 0.2));
 }
 </style>
