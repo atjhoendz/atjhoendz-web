@@ -9,6 +9,7 @@ module.exports = {
         lightYellow: '#FFC276',
         black: '#000000',
         white: '#FFFFFF',
+        cyan: '#00FFFF',
       },
       fontFamily: {
         nunito: ['nunito', 'sans-serif'],
