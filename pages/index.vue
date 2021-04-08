@@ -17,7 +17,7 @@
             <span class="block">Moh. Achun</span>
             <span class="block">Armando</span>
           </div>
-          <span class="block text-2xl md:text-3xl font-medium mt-8"
+          <span class="block text-2xl md:text-3xl font-medium mt-5"
             >Full Stack Web Developer</span
           >
         </div>
