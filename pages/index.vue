@@ -216,11 +216,58 @@
         </div>
       </div>
     </section>
-    <section id="blog" class="bg-gradient-to-t from-lightBlue to-darkBlue">
+    <section id="blog" class="bg-charade">
       <div
-        class="container min-h-screen flex items-center justify-center mx-auto"
+        class="container sectionHeight w-full px-3 py-10 md:py-0 md:w-3/4 mx-auto flex items-center justify-center"
       >
-        BLOG
+        <div class="w-full">
+          <div class="flex justify-between w-full items-center">
+            <div class="flex flex-col">
+              <span
+                class="block text-xs md:text-sm text-lightYellow font-semibold mb-1 md:mb-2"
+              >
+                TECH NOTES
+              </span>
+              <span class="block font-playFair text-3xl md:text-4xl">Blog</span>
+            </div>
+            <div class="flex">
+              <span
+                class="hidden md:block text-base md:text-xl hover:cursor-pointer bg-transparent border-1 border-lightYellow hover:bg-lightYellow hover:text-charade rounded-lg p-1 px-2 text-lightYellow transform active:scale-90"
+                >Show More</span
+              >
+            </div>
+          </div>
+          <div
+            class="flex items-center w-full space-x-0 md:space-x-4 flex-wrap md:flex-nowrap"
+          >
+            <div
+              v-for="i in 3"
+              :key="i"
+              class="blogCard bg-lightBlue mt-5 md:mt-10 rounded-lg p-5 border-1 border-lightYellow hover:shadow-xl hover:border-2 hover:cursor-pointer transform hover:scale-105"
+            >
+              <span class="block text-2xl font-semibold font-playFair">
+                This is Blog Title {{ i }}
+              </span>
+              <span class="block text-lightYellow text-xs mt-1 font-semibold"
+                >08 April 2021</span
+              >
+              <div class="mt-3 text-justify">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+                libero soluta assumenda nihil voluptatum cumque? Odit quas
+                expedita fuga reprehenderit quo, magnam maiores consequuntur
+                culpa quod est, deleniti ullam alias. Lorem ipsum dolor sit
+                amet, consectetur adipisicing elit. aAliquid perspiciatis
+                perferendis dolorum assumenda....
+              </div>
+            </div>
+            <div class="flex justify-center min-w-full">
+              <span
+                class="block mt-10 md:hidden text-base hover:cursor-pointer bg-transparent border-1 border-lightYellow hover:bg-lightYellow hover:text-charade rounded-lg p-1 px-2 text-lightYellow transform active:scale-90"
+                >Show More</span
+              >
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <section id="bookmarks" class="bg-gradient-to-b from-lightBlue to-darkBlue">
@@ -230,7 +277,7 @@
         BOOKMARKS
       </div>
     </section>
-    <section id="contact" class="bg-gradient-to-t from-lightBlue to-darkBlue">
+    <section id="contact" class="bg-darkBlue">
       <div class="container h-70vh flex items-center justify-center mx-auto">
         CONTACT
       </div>
@@ -468,10 +515,24 @@ export default {
   min-width: 90%;
 }
 
+.border-1 {
+  border-width: 1px;
+}
+
+.blogCard {
+  min-height: 10rem;
+  min-width: 100%;
+}
+
 @media (min-width: 768px) {
   .card {
     min-height: 60vh;
     min-width: 30%;
+  }
+
+  .blogCard {
+    min-height: 16rem;
+    min-width: 32.5%;
   }
 }
 </style>
