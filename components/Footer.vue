@@ -1,10 +1,14 @@
 <template>
   <footer
-    class="bg-darkBlue flex flex-col justify-center items-center footerHeight"
+    class="bg-darkBlue flex flex-col justify-center items-center footerHeight pt-4 md:pt-0"
   >
-    <div class="font-playFair font-bold text-3xl mb-12">Let's Talk?</div>
-    <div class="flex flex-row">
-      <span>&copy; {{ new Date().getFullYear() }} Built with</span>
+    <div class="font-playFair font-bold text-xl md:text-3xl mb-6 md:mb-12">
+      Thank You!
+    </div>
+    <div class="flex flex-row items-center">
+      <span class="text-sm md:text-base"
+        >&copy; {{ new Date().getFullYear() }} Built with</span
+      >
       <span class="mx-3"
         ><svg
           xmlns="http://www.w3.org/2000/svg"
@@ -19,8 +23,8 @@
       ></span>
       <span>by Moh Achun Armando</span>
     </div>
-    <div class="flex mt-3 items-center">
-      <span>Using</span>
+    <div class="flex mt-2 items-center text-sm md:text-base">
+      <span>Tech stack: </span>
       <div
         class="ml-3 mr-2 flex items-center hover:bg-lightBlue hover:rounded-md hover:p-1 hover:cursor-pointer"
         @mouseenter="showTooltip('nuxtTooltip')"
@@ -61,6 +65,22 @@
           Tailwindcss
         </span>
       </div>
+    </div>
+    <div class="mt-2 text-center text-sm md:text-base">
+      <span class="block"
+        >Icons by
+        <a href="https://iconmonstr.com/"><strong>iconmonstr</strong></a> &
+        <a href="https://materialdesignicons.com/"
+          ><strong>Material Design Icons</strong></a
+        ></span
+      >
+      <span class="block"
+        >Design inspiration from
+        <a
+          href="https://dribbble.com/shots/7662998-Growth-Personal-Portfolio-Theme"
+          ><strong>Growth by Subash Chandra</strong></a
+        ></span
+      >
     </div>
   </footer>
 </template>
