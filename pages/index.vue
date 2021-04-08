@@ -115,7 +115,7 @@
           <div class="flex justify-between w-full items-center">
             <div class="flex flex-col">
               <span
-                class="block miniTitle text-xs md:text-sm text-lightYellow font-semibold mb-1 md:mb-2"
+                class="block text-xs md:text-sm text-lightYellow font-semibold mb-1 md:mb-2"
                 >MY EXPERIENCE</span
               >
               <span class="block font-playFair text-3xl md:text-4xl"
@@ -232,7 +232,7 @@
             </div>
             <div class="flex">
               <span
-                class="hidden md:block text-base md:text-xl hover:cursor-pointer bg-transparent border-1 border-lightYellow hover:bg-lightYellow hover:text-charade rounded-lg p-1 px-2 text-lightYellow transform active:scale-90"
+                class="hidden md:block text-base md:text-xl hover:cursor-pointer bg-tuna border-1 border-lightYellow hover:bg-lightYellow hover:text-charade rounded-md p-1 px-2 transform active:scale-90"
                 >Show More</span
               >
             </div>
@@ -243,7 +243,7 @@
             <div
               v-for="i in 3"
               :key="i"
-              class="blogCard bg-lightBlue mt-5 md:mt-10 rounded-lg p-5 border-1 border-lightYellow hover:shadow-xl hover:border-2 hover:cursor-pointer transform hover:scale-105"
+              class="blogCard bg-tuna mt-5 md:mt-10 rounded-md p-5 border-1 border-lightYellow hover:shadow-xl hover:border-2 hover:cursor-pointer transform hover:scale-105"
             >
               <span class="block text-2xl font-semibold font-playFair">
                 This is Blog Title {{ i }}
@@ -262,7 +262,7 @@
             </div>
             <div class="flex justify-center min-w-full">
               <span
-                class="block mt-10 md:hidden text-base hover:cursor-pointer bg-transparent border-1 border-lightYellow hover:bg-lightYellow hover:text-charade rounded-lg p-1 px-2 text-lightYellow transform active:scale-90"
+                class="block mt-10 md:hidden text-base hover:cursor-pointer bg-tuna border-1 border-lightYellow hover:bg-lightYellow hover:text-charade rounded-md p-1 px-2 transform active:scale-90"
                 >Show More</span
               >
             </div>
@@ -270,14 +270,55 @@
         </div>
       </div>
     </section>
-    <section id="bookmarks" class="bg-gradient-to-b from-lightBlue to-darkBlue">
+    <section id="bookmarks" class="bg-darkBlue">
       <div
-        class="container min-h-screen flex items-center justify-center mx-auto"
+        class="container sectionHeight w-full md:w-3/4 px-3 py-10 md:py-0 flex items-center justify-center mx-auto"
       >
-        BOOKMARKS
+        <div class="w-full">
+          <div class="flex justify-between w-full items-center">
+            <div class="flex flex-col">
+              <span
+                class="block text-xs md:text-sm text-lightYellow font-semibold mb-1 md:mb-2"
+                >TECH NOTES</span
+              >
+              <span
+                class="block font-playFair text-3xl md:text-4xl font-semibold"
+                >Bookmarks</span
+              >
+            </div>
+            <div class="flex">
+              <span
+                class="hidden md:block text-base md:text-xl hover:cursor-pointer bg-tuna border-1 border-lightYellow hover:bg-lightYellow hover:text-darkBlue rounded-md p-1 px-2 transform active:scale-90"
+                >Show More</span
+              >
+            </div>
+          </div>
+          <div class="grid gap-4 grid-cols-1 md:grid-cols-2 mt-5 md:mt-10">
+            <div
+              v-for="i in bookmarkData"
+              :key="i"
+              class="bg-tuna border-1 border-lightYellow p-3 px-5 rounded-lg hover:cursor-pointer hover:border-2 transform active:scale-95"
+            >
+              <span
+                class="block text-xl md:text-2xl font-playFair font-semibold mb-2"
+                >This is title of Bookmark from a website {{ i }}</span
+              >
+              <span
+                class="block text-xs md:text-sm text-lightYellow font-semibold"
+                >https://www.thisisthelink.com/page/1</span
+              >
+            </div>
+          </div>
+          <div class="flex min-w-full justify-center mt-10">
+            <span
+              class="block md:hidden text-base md:text-xl hover:cursor-pointer bg-tuna border-1 border-lightYellow hover:bg-lightYellow hover:text-darkBlue rounded-md p-1 px-2 transform active:scale-90"
+              >Show More</span
+            >
+          </div>
+        </div>
       </div>
     </section>
-    <section id="contact" class="bg-darkBlue">
+    <section id="contact" class="bg-charade">
       <div class="container h-70vh flex items-center justify-center mx-auto">
         CONTACT
       </div>
@@ -454,6 +495,12 @@ export default {
   head: () => ({
     title: 'Home',
   }),
+  computed: {
+    bookmarkData() {
+      if (this.isMobile) return 3
+      return 6
+    },
+  },
   mounted() {
     this.checkMobile()
   },
@@ -471,13 +518,14 @@ export default {
     checkMobile() {
       if (window.innerWidth < 768) {
         this.divider = 0.93
+        this.isMobile = true
       } else {
         this.divider = 0.3
-        this.isMobile = true
+        this.isMobile = false
       }
     },
     showTooltip(type, name) {
-      if (!this.isMobile) return
+      if (this.isMobile) return
       const indexType = this.techStackList.findIndex((item) => {
         return item.type === type
       })
