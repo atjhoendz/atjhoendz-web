@@ -10,6 +10,7 @@ module.exports = {
         black: '#000000',
         white: '#FFFFFF',
         cyan: '#00FFFF',
+        ebonyClay: '#232737',
       },
       fontFamily: {
         nunito: ['nunito', 'sans-serif'],
