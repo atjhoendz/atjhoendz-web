@@ -1,6 +1,6 @@
 <template>
   <footer
-    class="bg-darkBlue flex flex-col justify-center items-center footerHeight pt-4 md:pt-0"
+    class="bg-lightBlue flex flex-col justify-center items-center footerHeight pt-4 md:pt-0"
   >
     <div class="font-playFair font-bold text-xl md:text-3xl mb-6 md:mb-12">
       Thank You!
