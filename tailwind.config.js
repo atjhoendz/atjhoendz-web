@@ -19,6 +19,7 @@ module.exports = {
         github: '#211F1F',
         git: '#f34f29',
         vscode: '#0078d7',
+        charade: '#252c3c',
       },
       fontFamily: {
         nunito: ['nunito', 'sans-serif'],
@@ -36,7 +37,10 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      scale: ['active'],
+      backgroundColor: ['active'],
+    },
   },
   plugins: [],
 }
