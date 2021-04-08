@@ -10,9 +10,8 @@
       <nuxt-link to="/">
         <button class="bg-lightYellow p-3 rounded-md" @click="scrollToTop()">
           <svg
-            fill="#1F2235"
-            width="24"
-            height="24"
+            class="fill-current text-darkBlue h-4 w-4 md:h-6 md:w-6"
+            viewbox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
             fill-rule="evenodd"
             clip-rule="evenodd"
