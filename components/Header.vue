@@ -1,5 +1,8 @@
 <template>
-  <header class="bg-transparent fixed w-full z-50">
+  <header
+    class="bg-transpared fixed w-full z-50"
+    :class="{ scrolled: !atTopOfPage || mobileMenuOpen }"
+  >
     <div
       class="flex flex-row justify-between py-4 md:py-6 mx-auto px-3 md:px-0 w-full md:w-3/4 items-center"
     >
@@ -25,7 +28,7 @@
         </svg>
       </button>
       <nav
-        class="transition duration-700 ease-out absolute md:relative top-16 md:top-0 left-11 md:left-0 md:flex flex-col md:flex-row md:space-x-6 font-semibold text-md md:text-base shadow-lg md:shadow-none bg-lightBlue md:bg-transparent w-3/4 md:w-auto text-center"
+        class="transition duration-700 ease-out absolute md:relative top-16 md:top-0 left-0 md:left-0 md:flex flex-col md:flex-row space-y-1 md:space-y-0 pb-4 md:pb-0 md:space-x-6 font-semibold text-md md:text-base shadow-lg md:shadow-none bg-darkBlue md:bg-transparent w-full md:w-auto text-center items-center"
         :class="{ flex: mobileMenuOpen, hidden: !mobileMenuOpen }"
       >
         <nuxt-link
@@ -64,7 +67,7 @@
           >CONTACT</nuxt-link
         >
         <button
-          class="border-lightYellow border-2 bg-transparent hover:bg-lightYellow hover:text-darkBlue hover:font-semibold p-2.5 rounded"
+          class="border-lightYellow border-2 bg-transparent hover:bg-lightYellow hover:text-darkBlue hover:font-semibold p-2.5 rounded w-36 md:w-auto mx-auto md:mx-0"
         >
           LET'S CHAT
         </button>
@@ -77,6 +80,24 @@
 export default {
   data: () => ({
     mobileMenuOpen: false,
+    atTopOfPage: true,
   }),
+  beforeMount() {
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  methods: {
+    handleScroll() {
+      if (window.pageYOffset > 100) {
+        this.atTopOfPage = false
+      } else {
+        this.atTopOfPage = true
+      }
+    },
+  },
 }
 </script>
+<style>
+.scrolled {
+  @apply shadow-2xl bg-darkBlue;
+}
+</style>
