@@ -1,7 +1,7 @@
 <template>
   <header class="bg-transparent fixed w-full z-50">
     <div
-      class="flex flex-row justify-between space-x-0 md:space-x-4 py-6 mx-auto w-3/4 align-middle"
+      class="flex flex-row justify-between py-4 md:py-6 mx-auto px-3 md:px-0 w-full md:w-3/4 items-center"
     >
       <div>
         <a href="/" class="block">
@@ -25,7 +25,7 @@
         </svg>
       </button>
       <nav
-        class="transition duration-700 ease-out absolute md:relative top-16 md:top-0 left-11 md:flex flex-col md:flex-row md:space-x-6 font-semibold text-md md:text-base shadow-lg md:shadow-none bg-lightBlue md:bg-transparent w-3/4 md:w-auto text-center"
+        class="transition duration-700 ease-out absolute md:relative top-16 md:top-0 left-11 md:left-0 md:flex flex-col md:flex-row md:space-x-6 font-semibold text-md md:text-base shadow-lg md:shadow-none bg-lightBlue md:bg-transparent w-3/4 md:w-auto text-center"
         :class="{ flex: mobileMenuOpen, hidden: !mobileMenuOpen }"
       >
         <nuxt-link
@@ -64,7 +64,7 @@
           >CONTACT</nuxt-link
         >
         <button
-          class="border-lightYellow border-2 bg-transparent hover:bg-lightYellow hover:text-darkBlue hover:font-semibold p-2.5"
+          class="border-lightYellow border-2 bg-transparent hover:bg-lightYellow hover:text-darkBlue hover:font-semibold p-2.5 rounded"
         >
           LET'S CHAT
         </button>
