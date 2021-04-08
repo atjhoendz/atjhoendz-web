@@ -66,7 +66,7 @@
         </span>
       </div>
     </div>
-    <div class="mt-2 text-center text-sm md:text-base">
+    <div class="mt-2 mb-4 md:mb-0 text-center text-sm md:text-base">
       <span class="block"
         >Icons by
         <a href="https://iconmonstr.com/"><strong>iconmonstr</strong></a> &
