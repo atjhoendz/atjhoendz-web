@@ -20,6 +20,7 @@ module.exports = {
         git: '#f34f29',
         vscode: '#0078d7',
         charade: '#252c3c',
+        tuna: '#2e344b',
       },
       fontFamily: {
         nunito: ['nunito', 'sans-serif'],
