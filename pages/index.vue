@@ -56,7 +56,7 @@
             similique est sequi.
           </div>
         </div>
-        <div class="block mt-5 md:mt-10 w-full md:w-2/3 px-3 mx-auto">
+        <div class="block mt-5 md:mt-10 w-full md:w-2/3 px-3 md:px-0 mx-auto">
           <div class="flex flex-col">
             <span
               class="block text-lightYellow text-xs md:text-sm font-semibold mb-1 md:mb-2"
