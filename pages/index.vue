@@ -348,7 +348,7 @@
               SOCIAL MEDIA
             </span>
             <span class="block font-playFair text-3xl md:text-4xl font-semibold"
-              >Let's Be Friends</span
+              >Let's Get In Touch</span
             >
           </div>
           <div class="grid gap-4 grid-cols-3 mt-10">
