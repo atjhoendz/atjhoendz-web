@@ -51,8 +51,6 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Playfair+Display:wght@900&display=swap');
-
 html {
   @apply font-nunito;
 

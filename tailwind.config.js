@@ -23,7 +23,7 @@ module.exports = {
         tuna: '#2e344b',
       },
       fontFamily: {
-        nunito: ['nunito', 'sans-serif'],
+        nunito: ['Nunito', 'sans-serif'],
         playFair: ['Playfair Display', 'serif'],
       },
       keyframes: {
