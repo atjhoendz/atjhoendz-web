@@ -67,7 +67,7 @@
           >CONTACT</nuxt-link
         >
         <a
-          class="border-lightYellow border-2 bg-transparent hover:bg-lightYellow hover:text-darkBlue hover:font-semibold p-1 md:p-2 rounded w-32 md:w-auto mx-auto md:mx-0 transform active:scale-90"
+          class="border-lightYellow border-2 bg-transparent hover:bg-lightYellow hover:text-darkBlue hover:font-semibold p-1 md:p-2.5 md:px-3.5 rounded w-32 md:w-auto mx-auto md:mx-0 transform active:scale-90"
           href="mailto:achunarmando@gmail.com"
           target="_blank"
         >
