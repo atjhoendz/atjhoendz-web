@@ -319,8 +319,58 @@
       </div>
     </section>
     <section id="contact" class="bg-charade">
-      <div class="container h-70vh flex items-center justify-center mx-auto">
-        CONTACT
+      <div
+        class="container h-70vh w-full md:w-3/4 px-3 flex items-center justify-center mx-auto"
+      >
+        <div class="w-full">
+          <div class="flex flex-col">
+            <span
+              class="block text-xs md:text-sm text-lightYellow font-semibold mb-1 md:mb-2"
+            >
+              SOCIAL MEDIA
+            </span>
+            <span class="block font-playFair text-3xl md:text-4xl font-semibold"
+              >Let's Be Friends</span
+            >
+          </div>
+          <div class="grid gap-4 grid-cols-3 mt-10">
+            <a
+              v-for="(item, i) in socialMedia"
+              :key="i"
+              class="rounded-lg p-3 md:p-8 border-1 border-lightYellow flex items-center justify-center md:justify-between hover:border-2 hover:cursor-pointer transform active:scale-90"
+              :class="i == 5 ? 'bg-lightYellow' : 'bg-tuna'"
+              :href="item.link"
+              target="_blank"
+            >
+              <div class="hidden md:flex flex-col">
+                <span
+                  class="font-playFair text-3xl"
+                  :class="i == 5 ? 'text-darkBlue' : ''"
+                  >{{ item.name }}</span
+                >
+                <span
+                  class="text-lightYellow text-xs"
+                  :class="i == 5 ? 'text-darkBlue' : ''"
+                  >{{ item.desc }}</span
+                >
+              </div>
+              <div>
+                <svg
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="fill-current h-8 md:h-16 w-8 md:w-16"
+                  :class="
+                    i == 5
+                      ? 'text-darkBlue'
+                      : 'text-lightYellow md:text-darkBlue'
+                  "
+                >
+                  <path :d="item.svg" />
+                </svg>
+              </div>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   </div>
@@ -491,6 +541,52 @@ export default {
         ],
       },
     ],
+    socialMedia: [
+      {
+        name: 'LinkedIn',
+        desc: 'Professional social profile',
+        svg:
+          'M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z',
+        link: 'https://www.linkedin.com/in/moh-achun-armando/',
+      },
+      {
+        name: 'Github',
+        desc: 'Code repository',
+        svg:
+          'M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12',
+        link: 'https://github.com/atjhoendz',
+      },
+      {
+        name: 'Dev.to',
+        desc: 'Another place for tech notes',
+        svg:
+          'M7.42 10.05c-.18-.16-.46-.23-.84-.23H6l.02 2.44.04 2.45.56-.02c.41 0 .63-.07.83-.26.24-.24.26-.36.26-2.2 0-1.91-.02-1.96-.29-2.18zM0 4.94v14.12h24V4.94H0zM8.56 15.3c-.44.58-1.06.77-2.53.77H4.71V8.53h1.4c1.67 0 2.16.18 2.6.9.27.43.29.6.32 2.57.05 2.23-.02 2.73-.47 3.3zm5.09-5.47h-2.47v1.77h1.52v1.28l-.72.04-.75.03v1.77l1.22.03 1.2.04v1.28h-1.6c-1.53 0-1.6-.01-1.87-.3l-.3-.28v-3.16c0-3.02.01-3.18.25-3.48.23-.31.25-.31 1.88-.31h1.64v1.3zm4.68 5.45c-.17.43-.64.79-1 .79-.18 0-.45-.15-.67-.39-.32-.32-.45-.63-.82-2.08l-.9-3.39-.45-1.67h.76c.4 0 .75.02.75.05 0 .06 1.16 4.54 1.26 4.83.04.15.32-.7.73-2.3l.66-2.52.74-.04c.4-.02.73 0 .73.04 0 .14-1.67 6.38-1.8 6.68z',
+        link: 'https://dev.to/atjhoendz',
+      },
+      {
+        name: 'Facebook',
+        desc: 'Social media for tech community',
+        svg:
+          'M23.9981 11.9991C23.9981 5.37216 18.626 0 11.9991 0C5.37216 0 0 5.37216 0 11.9991C0 17.9882 4.38789 22.9522 10.1242 23.8524V15.4676H7.07758V11.9991H10.1242V9.35553C10.1242 6.34826 11.9156 4.68714 14.6564 4.68714C15.9692 4.68714 17.3424 4.92149 17.3424 4.92149V7.87439H15.8294C14.3388 7.87439 13.8739 8.79933 13.8739 9.74824V11.9991H17.2018L16.6698 15.4676H13.8739V23.8524C19.6103 22.9522 23.9981 17.9882 23.9981 11.9991Z',
+        link: 'https://facebook.com/atjhoendz789',
+      },
+      {
+        name: 'Empty',
+        desc: 'soon',
+        svg:
+          'M24 4.5v15c0 .85-.65 1.5-1.5 1.5H21V7.387l-9 6.463-9-6.463V21H1.5C.649 21 0 20.35 0 19.5v-15c0-.425.162-.8.431-1.068C.7 3.16 1.076 3 1.5 3H2l10 7.25L22 3h.5c.425 0 .8.162 1.069.432.27.268.431.643.431 1.068z',
+        link: '',
+      },
+      {
+        name: 'Email',
+        desc: 'achunarmando@gmail.com',
+        svg:
+          'M24 4.5v15c0 .85-.65 1.5-1.5 1.5H21V7.387l-9 6.463-9-6.463V21H1.5C.649 21 0 20.35 0 19.5v-15c0-.425.162-.8.431-1.068C.7 3.16 1.076 3 1.5 3H2l10 7.25L22 3h.5c.425 0 .8.162 1.069.432.27.268.431.643.431 1.068z',
+        bgColor: 'bg-lightYellow',
+        textColor: 'text-darkBlue',
+        link: 'mailto:achunarmando@gmail.com',
+      },
+    ],
   }),
   head: () => ({
     title: 'Home',
@@ -546,7 +642,7 @@ export default {
 }
 
 .h-70vh {
-  min-height: 70vh;
+  min-height: 60vh;
 }
 
 .imgHeight {
@@ -581,6 +677,10 @@ export default {
   .blogCard {
     min-height: 16rem;
     min-width: 32.5%;
+  }
+
+  .h-70vh {
+    min-height: 70vh;
   }
 }
 </style>
