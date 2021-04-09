@@ -619,9 +619,7 @@ export default {
       },
     ],
   }),
-  head: () => ({
-    title: 'Home',
-  }),
+  head: () => ({}),
   computed: {
     bookmarkData() {
       if (this.isMobile) return 3
