@@ -26,7 +26,7 @@
     <div class="flex mt-2 items-center text-sm md:text-base">
       <span>Tech stack: </span>
       <div
-        class="ml-3 mr-2 flex items-center hover:bg-lightBlue hover:rounded-md hover:p-1 hover:cursor-pointer"
+        class="ml-3 mr-2 flex items-center hover:cursor-pointer"
         @mouseenter="showTooltip('nuxtTooltip')"
         @mouseleave="showTooltip('nuxtTooltip')"
       >
@@ -48,7 +48,7 @@
         >
       </div>
       <div
-        class="flex items-center hover:bg-lightBlue hover:rounded-md hover:p-1 hover:cursor-pointer"
+        class="flex items-center hover:cursor-pointer"
         @mouseenter="showTooltip('tailwindTooltip')"
         @mouseleave="showTooltip('tailwindTooltip')"
       >
