@@ -88,6 +88,7 @@
         <span>
           <a href="https://iconify.design/"><strong>iconify</strong></a>
         </span>
+        <span>,</span>
         <span>
           <a href="https://seeklogo.com/"><strong>seeklogo</strong></a>
         </span>
