@@ -70,7 +70,7 @@
       <span class="block"
         >Icons by
 
-        <a href="https://materialdesignicons.com/"
+        <a href="https://materialdesignicons.com/" target="_blank"
           ><strong>Material Design Icons</strong></a
         >
         <span class="hover:cursor-pointer">
@@ -82,21 +82,28 @@
       </span>
       <div v-if="showMoreAttribution">
         <span
-          ><a href="https://iconmonstr.com/"><strong>iconmonstr</strong></a>
+          ><a href="https://iconmonstr.com/" target="_blank"
+            ><strong>iconmonstr</strong></a
+          >
         </span>
         <span>,</span>
         <span>
-          <a href="https://iconify.design/"><strong>iconify</strong></a>
+          <a href="https://iconify.design/" target="_blank"
+            ><strong>iconify</strong></a
+          >
         </span>
         <span>,</span>
         <span>
-          <a href="https://seeklogo.com/"><strong>seeklogo</strong></a>
+          <a href="https://seeklogo.com/" target="_blank"
+            ><strong>seeklogo</strong></a
+          >
         </span>
       </div>
       <span class="block"
         >Design inspiration from
         <a
           href="https://dribbble.com/shots/7662998-Growth-Personal-Portfolio-Theme"
+          target="_blank"
           ><strong>Growth by Subash Chandra</strong></a
         ></span
       >
