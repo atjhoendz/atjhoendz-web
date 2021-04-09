@@ -359,6 +359,14 @@
               :class="i == 5 ? 'bg-lightYellow' : 'bg-tuna'"
               :href="item.link"
               target="_blank"
+              @mouseenter="
+                showIconHighlight = true
+                idIconHighlighted = i
+              "
+              @mouseleave="
+                showIconHighlight = false
+                idIconHighlighted = ''
+              "
             >
               <div class="hidden md:flex flex-col">
                 <span
@@ -377,11 +385,7 @@
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
                   class="fill-current h-8 md:h-16 w-8 md:w-16"
-                  :class="
-                    i == 5
-                      ? 'text-darkBlue'
-                      : 'text-lightYellow md:text-darkBlue hover:text-lightYellow'
-                  "
+                  :class="highlightSocmed(i)"
                 >
                   <path :d="item.svg" />
                 </svg>
@@ -401,6 +405,8 @@ export default {
     tempShowArrowID: '',
     divider: 0.3,
     isMobile: false,
+    showIconHighlight: false,
+    idIconHighlighted: '',
     techStackList: [
       {
         type: 'Frontend',
@@ -656,6 +662,15 @@ export default {
       this.techStackList[indexType].list[indexList].show = !this.techStackList[
         indexType
       ].list[indexList].show
+    },
+    highlightSocmed(i) {
+      if (i === 5) {
+        return 'text-darkBlue'
+      } else {
+        if (this.showIconHighlight && i === this.idIconHighlighted)
+          return 'text-lightYellow'
+        return 'text-lightYellow md:text-darkBlue'
+      }
     },
   },
 }
