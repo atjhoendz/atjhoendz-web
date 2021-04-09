@@ -69,11 +69,29 @@
     <div class="mt-2 mb-4 md:mb-0 text-center text-sm md:text-base">
       <span class="block"
         >Icons by
-        <a href="https://iconmonstr.com/"><strong>iconmonstr</strong></a> &
+
         <a href="https://materialdesignicons.com/"
           ><strong>Material Design Icons</strong></a
-        ></span
-      >
+        >
+        <span class="hover:cursor-pointer">
+          &
+          <strong @click="showMoreAttribution = !showMoreAttribution">{{
+            showMoreAttribution ? 'less' : 'more'
+          }}</strong></span
+        >
+      </span>
+      <div v-if="showMoreAttribution">
+        <span
+          ><a href="https://iconmonstr.com/"><strong>iconmonstr</strong></a>
+        </span>
+        <span>,</span>
+        <span>
+          <a href="https://iconify.design/"><strong>iconify</strong></a>
+        </span>
+        <span>
+          <a href="https://seeklogo.com/"><strong>seeklogo</strong></a>
+        </span>
+      </div>
       <span class="block"
         >Design inspiration from
         <a
@@ -90,6 +108,7 @@ export default {
   data: () => ({
     nuxtTooltip: false,
     tailwindTooltip: false,
+    showMoreAttribution: false,
   }),
   methods: {
     showTooltip(type) {
