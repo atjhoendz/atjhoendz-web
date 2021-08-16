@@ -4,7 +4,7 @@ My personal website
 
 [atjhoendz.github.io](https://atjhoendz.github.io)
 
-## Build With NuxtJS
+## Build With NuxtJS and TailwindCSS
 
 ## Build Setup
 
