@@ -16,7 +16,7 @@ script:
 
 branches:
   only:
-    - main
+    - v2
 
 deploy:
   provider: pages
@@ -26,4 +26,4 @@ deploy:
   local_dir: dist
   target_branch: master
   on:
-    branch: main
+    branch: v2 
