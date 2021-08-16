@@ -127,7 +127,7 @@ export default {
   }),
   async fetch() {
     this.blogs = await fetch(
-      'https://dev.to/api/articles?username=atjhoendz&page=1&per_page=3'
+      'https://dev.to/api/articles/latest?username=atjhoendz&page=1&per_page=3'
     ).then((res) => res.json())
   },
   methods: {
