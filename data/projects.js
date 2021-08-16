@@ -65,6 +65,6 @@ export const projects = [
     urlRepo: '',
     urlDemo: '',
     isPrivate: true,
-    year: '2018',
+    year: '2019',
   },
 ]
