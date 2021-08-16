@@ -1,4 +1,6 @@
-# atjhoendz-web
+# Moh Achun Armando Personal Site
+
+[![Build Status](https://travis-ci.com/atjhoendz/atjhoendz-web.svg?branch=v2)](https://travis-ci.com/atjhoendz/atjhoendz-web)
 
 My personal website
 
