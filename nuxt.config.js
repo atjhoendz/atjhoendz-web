@@ -4,7 +4,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%sMoh Achun Armando',
+    titleTemplate: 'Moh Achun Armando',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -18,8 +18,7 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
         rel: 'stylesheet',
-        href:
-          'https://fonts.googleapis.com/css2?family=Nunito&family=Playfair+Display:wght@900&display=swap',
+        href: 'https://fonts.googleapis.com/css2?family=Nunito&family=Playfair+Display:wght@900&display=swap',
       },
     ],
   },
@@ -74,8 +73,4 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
-
-  tailwindcss: {
-    jit: true,
-  },
 }
